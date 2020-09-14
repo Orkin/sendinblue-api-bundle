@@ -2,6 +2,8 @@ parameters:
    sendinblue_api.class: SendinBlue\SendinBlueApiBundle\Wrapper\Mailin
 
 services:
+   SendinBlue\SendinBlueApiBundle\Wrapper\Mailin: '@sendinblue_api'
+
    sendinblue_api:
        class: "%sendinblue_api.class%"
        arguments: ["%sendin_blue_api.config%"]
